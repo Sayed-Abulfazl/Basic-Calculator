@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+.mode.dark{
+    background-color: black;
+    color: #fff;
+}
+.mode-text.dark{
+    color: black;
+}
+
+.animate-modal1{
+    animation: animation-modal1 .7s forwards ease-in-out ;
+}
+.animate-modal2{
+    animation: animation-modal2 .7s ease-in-out ;
+}
+.animate-forward{
+    animation: animation-forward 2s linear infinite;
+}
+.animate-backward{
+    animation: animation-backward 2s linear infinite;
+}
+@keyframes animation-forward {
+    0%{
+        filter: drop-shadow(0 0 1px #0f0);
+        transform: scale(0.9) translateX(0px);
+    }
+    50%{
+        transform: translateX(10px);
+    }
+    100%{
+        filter: drop-shadow(0 0 10px #0f0) drop-shadow(0 0 25px #0f0) drop-shadow(0 0 40px #0f0);
+        transform: scale(1) translateX(5px);
+    }
+}
+@keyframes animation-backward {
+    0%{
+        filter: drop-shadow(0 0 1px #f00);
+        transform: scale(0.9) translateX(0px);
+    }
+    50%{
+        transform: translateX(-10px);
+    }
+    100%{
+        filter: drop-shadow(0 0 10px #f00) drop-shadow(0 0 25px #f00) drop-shadow(0 0 40px #f00);
+        transform: scale(1) translateX(-5px);
+    }
+}
+@keyframes animation-modal1 {
+    0%{
+        opacity: 0;
+        transform: scale(0.95) translateY(-300px);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+@keyframes animation-modal2 {
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.persian.size-font{
+    font-size: 20px;
+}
+.reverse{
+    flex-direction: row-reverse;
+}
+
+.settingSpin{
+    animation: settingSpinAnimate 500ms;
+}
+@keyframes settingSpinAnimate {
+    0%{
+        transform:translateY(0) rotate(0deg) scale(1);
+    }
+    100%{
+        transform:translateY(10px) rotate(180deg) scale(2);
+    }
+}
+.direction{
+    direction: rtl;
+}
+.directionL {
+    direction: ltr;
+}
